@@ -1,7 +1,7 @@
 import React, {useState} from 'react';
 import Square from './Square';
 import _times from 'lodash.times';
-import calculateWinner from './utils/calculate-winner';
+import calculateWinner from '../utils/calculate-winner';
 
 export default function Board() {
   const [squares, setSquares] = useState([...Array(9)].map(item => ''));
