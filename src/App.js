@@ -9,6 +9,10 @@ export default function Board() {
   function handleClick(index) {
     let updatedSquares = [...squares];
 
+    if (updatedSquares[index]) {
+      return;
+    }
+
     updatedSquares[index] = turn;
     toggleTurn(turn === 'X' ? 'O' : 'X');
     setSquares(updatedSquares);
