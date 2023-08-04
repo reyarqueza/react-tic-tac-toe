@@ -1,22 +1,13 @@
-import React, {useState} from 'react';
+import React from 'react';
 
 export default function Square({
-  index,
   value,
-  setSquares,
-  squares,
-  turn,
-  toggleTurn
+  onSquareClick
 }) {
-  function handleClick() {
-    let updatedSquares = [...squares];
-
-    updatedSquares[index] = turn;
-    toggleTurn(turn === 'X' ? 'O' : 'X');
-    setSquares(updatedSquares);
-  }
-
   return (
-    <button className="square" onClick={handleClick}>{value}</button>
+    <button
+      className="square"
+      onClick={onSquareClick}
+    >{value}</button>
   )
 }
